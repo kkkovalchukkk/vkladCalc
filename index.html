@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор вкладов для вычисления доходности</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form class="form">
+      <fieldset class="form__fieldset">
+        <div class="form__label" style="display: flex; align-items: center; gap: 20px; height: 100px">
+          Учитывать капитализацию?
+          <input type="checkbox" name="capital" id="" style="display: block" />
+          <select id="capitalization">
+            <option value="30">Ежемесячная</option>
+            <option value="90">Квартальная</option>
+            <option value="360" selected>Ежегодная</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <label class="form__label"> Сумма вклада <input type="number" min="10000" value="10000" max="100000000" name="vklad" class="form__input" /> </label>
+        <input type="range" name="vkladRange" min="10000" value="10000" max="100000000" id="" />
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <label class="form__label">
+          Годовая ставка по депозиту
+          <input type="number" name="yearBet" min="0" class="form__input" value="1" />
+        </label>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <label class="form__label">
+          Срок размещения денежных средств (в днях)
+          <input type="number" name="daysLength" min="0" class="form__input" value="1" />
+        </label>
+      </fieldset>
+
+      <button>Расчитать</button>
+    </form>
+    <h1 class="result">Ваша доходность: <span class="value"></span></h1>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

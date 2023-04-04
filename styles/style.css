@@ -1,0 +1,39 @@
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+input[type="checkbox"] + select {
+  display: none;
+}
+
+input {
+  width: 100%;
+  max-width: 100px;
+}
+
+input[type="range"] {
+  max-width: 300px;
+}
+
+input[type="checkbox"]:checked + select {
+  display: initial;
+}
+input[type="checkbox"]:checked + div + div {
+  display: flex !important;
+}
+
+.value {
+  font-size: 18px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 12px;
+}
